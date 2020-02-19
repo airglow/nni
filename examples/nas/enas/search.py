@@ -26,7 +26,7 @@ if __name__ == "__main__":
     parser.add_argument("--search-for", choices=["macro", "micro"], default="macro")
     args = parser.parse_args()
 
-    dataset_train, dataset_valid = datasets.get_dataset("cifar10")
+    dataset_train, dataset_valid = datasets.get_dataset("ntu120")
     if args.search_for == "macro":
         model = GeneralNetwork()
         num_epochs = 310
